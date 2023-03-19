@@ -147,6 +147,7 @@ how much love we put into giving.
                             .onEnded{ _ in
                                 withAnimation(Animation.easeOut(duration: 0.4)) {
                                     if buttonOffset > buttonWidth / 2 {
+                                        playSound(sound: "chimeup", type: "mp3")
                                         buttonOffset = buttonWidth - 80
                                         isOnboardingViewActive = false
                                     } else {
@@ -170,6 +171,7 @@ how much love we put into giving.
         .onAppear {
             isAnimating = true
         }
+        .preferredColorScheme(.dark)
     }
 }
 
